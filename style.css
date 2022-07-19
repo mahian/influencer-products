@@ -1,0 +1,321 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #E02C6D;
+}
+
+/*---------------------------
+    defuld utilitys
+----------------------------*/
+.container{
+    padding: 0 120px;
+}
+.section_title{
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.btn{
+    padding: 10px 24px;
+    font-size: 16px;
+    border-radius: 40px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    margin-top: 16px;
+}
+.btn i{
+    margin-left: 8px;
+}
+/*---------------------------
+    nav-bar design
+----------------------------*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 120px;
+}
+#open_nav, .fa-cart-shopping{
+    display: none;
+}
+.logo h2{
+    font-size: 24px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 15px;
+    position: relative;
+}
+nav ul li::after{
+    content: '';
+    background-color: var(--primary-color);
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.2s;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+nav ul li i{
+    font-size: 24px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: 0.2s;
+}
+nav ul li a:hover{
+    color: var(--primary-color);
+}
+/*---------------------------
+    main content design
+----------------------------*/
+main{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+main > div{
+    width: 50%;
+}
+.hero-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('images/Circle\ design.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+main p{
+    font-size: 16px;
+    margin-top: 16px;
+}
+.main_title{
+    font-size: 52px;
+    margin-top: 14px;
+}
+/*---------------------------
+    client section design
+----------------------------*/
+.client{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.client img{
+    margin: 15px;
+}
+/*---------------------------
+    popular product design
+----------------------------*/
+.product_container{
+    padding: 100px 170px;
+}
+.product_container a{
+    font-size: 16px;
+    color: var(--primary-color);
+    text-align: right;
+    display: block;
+    text-decoration: none;
+    margin-top: 50px;
+}
+.product_container i{
+    margin-left: 8px;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.product{
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.076);
+}
+.product .thumbnail img{
+    width: 100%;
+}
+.product .title{
+    margin-top: 16px;
+    font-size: 28px;
+}
+.product .price{
+    font-size: 24px;
+}
+.product .rating{
+    display: flex;
+    align-items: center;
+}
+.product .rating i{
+    color: #FB8200;
+    font-size: 12px;
+}
+.product .rating span{
+    color: #5E6366;
+    font-size: 14px;
+    margin-left: 8px;
+}
+.product .description{
+    color: #787885;
+    font-size: 14px;
+}
+/*---------------------------
+    featured product design
+----------------------------*/
+.featured_product{
+    display: flex;
+    align-items: center;
+    padding-bottom: 80px;
+}
+.featured_product > div{
+    width: 100%;
+}
+.featured_product .title{
+    font-size: 38px;
+    margin-bottom: 16px;
+}
+.featured_product p{
+    font-size: 16px;
+}
+/*---------------------------
+    footer design
+----------------------------*/
+footer{
+    background-color: #0a0038;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+footer p{
+    font-size: 14px;
+}
+.social_links{
+    margin-top: 16px;
+    cursor: pointer;
+}
+.social_links a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    margin: 0 8px;
+    transition: 0.2s;
+}
+.social_links a:hover{
+    color: var(--primary-color);
+}
+
+/* responsive for tablet device */
+@media only screen and (max-width: 1024px){
+    .container{
+        padding: 0 80px;
+    }
+    .product_container {
+        padding: 100px 80px;
+    }
+    nav, nav ul{
+        padding: 30px 80px;
+        background-color: white;
+    }
+    #open_nav, .fa-cart-shopping{
+        display: block;
+        color: black;
+        cursor: pointer;
+    }
+    #open_nav{
+        height: 20px;
+        width: 20px;
+        transition: 0.3s;
+    }
+    .logo{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        font-size: 24px;
+        z-index: 999;
+        background-color: white;
+    }
+    .logo a{
+        color: black;
+    }
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        transition: 0.3s;
+    }
+    nav ul li{
+        list-style: none;
+        margin: 10px 15px;
+        width: 100%;
+        position: relative;
+    }
+    nav ul li:nth-child(1){
+        margin-top: 60px;
+    }
+    main {
+        height: auto;
+        flex-direction: column-reverse;
+        text-align: center;
+        margin: 100px 0;
+    }
+    main > div {
+        width: 100%;
+    }
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .featured_product {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .product_img {
+        margin-top: 40px;
+    }
+}
+@media only screen and (max-width: 668px){
+    .product_container {
+        padding: 100px 20px;
+    }
+    .container{
+        padding: 0 20px;
+    }
+    nav, nav ul{
+        padding: 30px 20px;
+        flex-direction: column;
+    }
+    .products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .client{
+        flex-direction: column;
+    }
+    .hero-image img {
+        width: 100%;
+    }
+    .product_img img {
+        width: 100%;
+    }
+    
+}
